@@ -1,0 +1,26 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.x'
+  displayName: 'Instalar Node.js'
+
+- script: |
+    npm install
+    npx wdio run wdio.conf.js
+  displayName: 'Executar Testes WebDriverIO'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/reports/results.json'
+    testRunTitle: 'Testes WebDriverIO'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: './reports'
+    artifactName: 'evidencias'
