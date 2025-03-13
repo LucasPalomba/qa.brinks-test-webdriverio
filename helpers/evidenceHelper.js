@@ -5,8 +5,8 @@ class EvidenceHelper {
         const filePath = `./reports/${testName}-${Date.now()}.png`;
         await browser.saveScreenshot(filePath);
         console.log(`Screenshot salvo em: ${filePath}`);
-        return filePath;
+        return filePath; 
     }
 }
 
-export default new EvidenceHelper();
+export default new EvidenceHelper(); 

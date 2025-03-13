@@ -21,4 +21,4 @@ class AzureHelper {
     }
 }
 
-export default new AzureHelper();
+export default new AzureHelper(); 

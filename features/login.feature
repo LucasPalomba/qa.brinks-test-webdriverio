@@ -8,6 +8,6 @@ Feature: BrinksPay login
     
 
     Examples:
-      | cnpj | password             |
+      | cnpj | password            |
       | 59868116000190 | Brinks#24 |
       

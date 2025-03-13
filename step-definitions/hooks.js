@@ -10,5 +10,5 @@ AfterStep(async function (scenario) {
 });
 
 After(async function () {
-    console.log('Finalizando teste...');
+    console.log('Finalizando teste...'); 
 });

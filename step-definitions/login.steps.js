@@ -20,7 +20,7 @@ When('clico no botao continuar', async () => {
 Then('devera exibir a tela inicial', async () => {
     await LoginPage.home()
     await ScreenshotHelper.takeScreenshot('home');
-})
+}) 
 
 
 
